@@ -25,7 +25,6 @@ function atualizar_pedidos() {
     }
 
     data.forEach(pedido => {
-      console.log(pedido);
       var num_itens_pedido = pedido.itens.length;
       const {pendentes, finalizados} = get_filtro_pedidos();
       const statusPedido = pedido.itens[0].situacao;
@@ -33,6 +32,7 @@ function atualizar_pedidos() {
       if ((statusPedido === 'pendente' && pendentes) || (statusPedido === 'finalizado' && finalizados)
       ) {
         pedido.itens.forEach(item => {
+          console.log(item);
           if (!document.getElementById(`pedidos-mesa-${pedido.id_mesa}`)) {
             criarMesa(pedido.id_mesa);
           }
