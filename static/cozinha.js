@@ -12,8 +12,8 @@ function atualizar_pedidos() {
   fetch(`/get-pedidos`)
   .then(response => response.json())
   .then(data => {
-    console.log(data);
     data = data.pedidos;
+    data = Object.values(data);
     if (!data) {
       return;
     }
