@@ -9,10 +9,10 @@ function get_filtro_pedidos() {
 }
 
 function atualizar_pedidos() {
+  console.log('atualizando pedidos');
   fetch(`/get-pedidos`)
   .then(response => response.json())
   .then(data => {
-    console.l();
     if (!data) {
       return;
     }
