@@ -12,6 +12,7 @@ function atualizar_pedidos() {
   fetch(`/get-pedidos`)
   .then(response => response.json())
   .then(data => {
+    console.log(data);
     data = data.pedidos;
     if (!data) {
       return;
@@ -32,7 +33,6 @@ function atualizar_pedidos() {
       if ((statusPedido === 'pendente' && pendentes) || (statusPedido === 'finalizado' && finalizados)
       ) {
         pedido.itens.forEach(item => {
-          console.log(item);
           if (!document.getElementById(`pedidos-mesa-${pedido.id_mesa}`)) {
             criarMesa(pedido.id_mesa);
           }
