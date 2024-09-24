@@ -13,7 +13,6 @@ function atualizar_pedidos() {
   .then(response => response.json())
   .then(data => {
     console.log(data);
-    data = data.pedidos;
     if (!data) {
       return;
     }
