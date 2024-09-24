@@ -12,6 +12,7 @@ function atualizar_pedidos() {
   fetch(`/get-pedidos`)
   .then(response => response.json())
   .then(data => {
+    console.log(data);
     if (!data) {
       return;
     }
@@ -23,7 +24,7 @@ function atualizar_pedidos() {
       }
     }
 
-    data.forEach(pedido => {
+    /*data.forEach(pedido => {
       var num_itens_pedido = pedido.itens.length;
       const {pendentes, finalizados} = get_filtro_pedidos();
       const statusPedido = pedido.itens[0].situacao;
@@ -36,7 +37,7 @@ function atualizar_pedidos() {
           }
           add_pedido_mesa_html(pedido.data_hora, pedido.id_mesa, item.item, item.quantidade, parseFloat(item.valor).toFixed(2), pedido.id_pedido, item.situacao, num_itens_pedido);
         })
-    }
+    }*/
     });
   });
 }
