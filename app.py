@@ -112,7 +112,7 @@ def get_pedidos_mesa():
 
 @app.route('/get-pedidos', methods=['GET'])
 def get_pedidos():
-    return [1, 2, 3]
+    return jsonify(database.get_pedidos())
 
 @app.route('/incrementar-quantidade-carrinho', methods=['POST'])
 def incrementar_quantidade():
