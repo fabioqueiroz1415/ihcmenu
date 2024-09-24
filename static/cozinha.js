@@ -37,8 +37,8 @@ function atualizar_pedidos() {
           }
           add_pedido_mesa_html(pedido.data_hora, pedido.id_mesa, item.item, item.quantidade, parseFloat(item.valor).toFixed(2), pedido.id_pedido, item.situacao, num_itens_pedido);
         })
-    }*/
-    });
+    }
+    });*/
   });
 }
 
