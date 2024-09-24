@@ -12,6 +12,7 @@ function atualizar_pedidos() {
   fetch(`/get-pedidos`)
   .then(response => response.json())
   .then(data => {
+    data = data.pedidos;
     if (!data) {
       mostra_texto_pedidos('pedidos vazios');
       return;

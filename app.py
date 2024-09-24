@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, jsonify
 import database.database as database
 import json
 
@@ -112,7 +112,7 @@ def get_pedidos_mesa():
 
 @app.route('/get-pedidos', methods=['GET'])
 def get_pedidos():
-    return database.get_pedidos()
+    return jsonify({'pedidos': database.get_pedidos()})
 
 @app.route('/incrementar-quantidade-carrinho', methods=['POST'])
 def incrementar_quantidade():
