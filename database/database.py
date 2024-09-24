@@ -5,15 +5,6 @@ user = 'ihcmenu'
 password = 'p1a4s1s5w9o'
 name = 'ihcmenu$default'
 
-conn = pymysql.connect(
-    host=host,
-    user=user,
-    password=password,
-    database=name,
-    charset='utf8mb4',
-    cursorclass=pymysql.cursors.DictCursor
-)
-
 def post_pedido_carrinho(data):
     try:
         conn = pymysql.connect(
