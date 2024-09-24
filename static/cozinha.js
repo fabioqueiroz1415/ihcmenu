@@ -12,9 +12,9 @@ function atualizar_pedidos() {
   fetch(`/get-pedidos`)
   .then(response => response.json())
   .then(data => {
+    console.log(data);
     data = data.pedidos;
     if (!data) {
-      mostra_texto_pedidos('pedidos vazios');
       return;
     }
 
@@ -114,14 +114,6 @@ function add_pedido_mesa_html(data_hora, id_mesa, item, quantidade, valor, id_pe
     cell6.id = `datahora-pedido-${id_pedido}`;
     cell6.rowSpan = num_itens_pedido;
   }
-}
-
-function mostra_texto_pedidos(texto, time=4000) {
-  var p = document.getElementById('texto-pedidos');
-  p.innerHTML = texto;
-  setTimeout(() => {
-    p.innerHTML = '';
-  }, time);
 }
 
 function finalizar_pedido(id_pedido) {
