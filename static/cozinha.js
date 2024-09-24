@@ -12,7 +12,7 @@ function atualizar_pedidos() {
   fetch(`/get-pedidos`)
   .then(response => response.json())
   .then(data => {
-    console.log(data);
+    console.l();
     if (!data) {
       return;
     }
