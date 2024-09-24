@@ -1,0 +1,28 @@
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/static/cozinha.css">
+</head>
+<body>
+
+  <h2>PEDIDOS</h2>
+  
+  <div class="opcao-item">
+    <input type="checkbox" id="pendentes" name="status" value="pendentes">
+    <label for="pendentes">Pendentes</label>
+  </div>
+  
+  <div class="opcao-item">
+    <input type="checkbox" id="finalizados" name="status" value="finalizados">
+    <label for="finalizados">Finalizados</label>
+  </div>
+
+  <div id="container-pedidos" class="container-pedidos">
+
+  </div>
+
+  <p id="texto-pedidos" class="green"></p>
+</body>
+<script src="/static/cozinha.js"></script>
+</html>

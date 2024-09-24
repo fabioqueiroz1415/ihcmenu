@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        
+        <title>Cozinha Sideral</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../static/font-awesome-4.7.0/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="../static/style.css" />
+
+        <style>
+            .menu-toggle {
+                display: none; /* Oculta o botão por padrão */
+            }
+            @media (max-width: 768px) {
+                .container {
+                    flex-direction: column;
+                    align-items: flex-start;
+                }
+                .container div {
+                    width: 100%;
+                    text-align: left;
+                    margin-bottom: 10px;
+                }
+                .container div a {
+                    display: block;
+                    margin: 5px 0;
+                }
+
+                .main{
+                    flex-direction: column;
+                    align-items: flex-start;
+                    display: none;
+                }
+                .main.active {
+                    display: flex;
+                }
+
+                .menu-toggle {
+                    display: block !important;
+                    background-color: #000000;
+                    color: white;
+                    padding: 10px;
+                    font-size: large;
+                    font-weight: bold;
+                    padding: 20px 30px;
+                    text-align: center;
+                    cursor: pointer;
+                }
+            }
+        </style>
+
+    </head>
+    <body id="{{id_mesa}}">
+        <div class="container">
+            <div class="header">
+                <img src="../static/imagens/final.png" alt="None">
+            </div>
+            <div class="menu-toggle">Menu</div>
+            <div class="main">
+                    <a href="/principal.html/{{id_mesa}}">Principal</a>
+                    <a href="/secundario.html/{{id_mesa}}">Secundário</a>
+                    <a href="/sobremesa.html/{{id_mesa}}">Sobremesas</a>
+                    <a href="/bebAlc.html/{{id_mesa}}">Bebidas alcoólicas</a>
+                    <a href="/bebNaoAlc.html/{{id_mesa}}">Bebidas não alcoólicas</a>
+                    <a href="/carrinho.html/{{id_mesa}}" class="icons">
+                        <i class="fa fa-shopping-cart fa-lg"></i>
+                    </a>
+            </div>
+            <div id="screen-content" class="screen"></div>
+            <!--<iframe id="screen-content" name="screen-content" class="screen" src="/promocoes.html/{{id_mesa}}"></iframe>-->
+            <h3>mesa {{id_mesa}}</h3>
+            <div class="foot">
+                <h2><center>Sobre Nós</center></h2>
+            </div>
+        </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const menuToggle = document.querySelector('.menu-toggle');
+                const menuContainer = document.querySelector('.main');
+        
+                if (menuToggle && menuContainer) {
+                    menuToggle.addEventListener('click', function() {
+                        menuContainer.classList.toggle('active');
+                        console.log('Menu toggle clicked');
+                    });
+                } else {
+                    console.log('Menu elements not found');
+                }
+            });
+        </script>
+        <script src="../static/script.js"></script>
+    </body>
+</html>

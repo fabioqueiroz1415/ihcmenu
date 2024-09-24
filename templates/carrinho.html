@@ -1,0 +1,69 @@
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      user-select: none;
+    }
+    td {
+      border: 1px solid black;
+      text-align: center;
+    }
+    .td-total {
+      font-weight: bold;
+      font-size: 1.5rem;
+      text-align: right;
+    }
+
+    .img-item {
+      width: 100px;
+      height: 100px;
+    }
+    .botoes-gerais {
+      display: flex;
+      justify-content: right;
+      margin-top: 3vh;
+    }
+  </style>
+</head>
+<body>
+  <table>
+    <thead>
+      <th></th>
+      <th>ID item</th>
+      <th>Nome</th>
+      <th>Valor</th>
+      <th colspan="3">Quantidade</th>
+    </thead>
+    <tbody id="carrinho-content">
+      {% for item in carrinho %}
+        <tr id="item-{{item.id_item}}">
+          <td><img src={{item['path_imagem']}} alt="" class="img-item"></td>
+          <td id="id-item-{{item['id_item']}}">{{item['id_item']}}</td>
+          <td>{{item['item']}}</td>
+          <td><span>R$</span><span>{{item['valor']}}</span></td>
+          <td onclick="incrementar_quantidade({{item}}, -1)">-</td>
+          <td id="qtd-item-{{item['id_item']}}">{{item['quantidade']}}</td>
+          <td onclick="incrementar_quantidade({{item}}, 1)">+</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+
+    <tbody>
+      <tr>
+        <td colspan="4"></td>
+        <td colspan="3" class="td-total"><span>Total: R$</span><span id="total">{{valor_total}}</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="botoes-gerais">
+    <button id="limpar-carrinho" onclick="limpar_carrinho({{id_mesa}})">Limpar carrinho</button>
+    <button id="enviar-pedido" onclick="enviar_pedido({{id_mesa}})">Enviar pedido</button>
+  </div>
+  <script src="../static/carrinhoMenu.js"></script>
+</body>
+</html>

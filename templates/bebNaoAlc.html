@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <title>Cozinha Sideral - Bebidas Não Alcoólicas</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../static/font-awesome-4.7.0/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="../static/styleProd.css" />
+        <style>
+            @media (max-width: 600px) {
+                .bebidasAlcoolicas {
+                    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                }
+            }
+        </style>
+    </head>
+    <body class="bodybebida" id="{{id_mesa}}">
+        <h2 style="color: #ffffff;">Bebidas Não Alcoólicas</h2>
+        <div class="bebidasAlcoolicas">
+            <div class="item" id="501">
+                <img src="../static/imagens/naoAlcoolicas/suco_laranja.jpeg" alt="Suco de Laranja">
+                <div class="description">Suco de Laranja Natural 1L</div>
+                <div class="description2">
+                    Suco de laranja espremido na hora, perfeito para acompanhar uma deliciosa pizza.
+                </div>
+                <div class="price">
+                    <button value="11.99">
+                        R$11.99 <i class="fa fa-shopping-cart"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="item" id="502">
+                <img src="../static/imagens/naoAlcoolicas/refrigerante_lata.jpeg" alt="Refrigerante">
+                <div class="description">Refrigerante Lata 250mL</div>
+                <div class="description2">
+                    Diversos sabores de refrigerantes clássicos, como cola, guaraná e laranja.
+                </div>
+                <div class="price">
+                    <button value="5.99">
+                        R$5.99 <i class="fa fa-shopping-cart"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="item" id="503">
+                <img src="../static/imagens/naoAlcoolicas/agua_sem_gas.jpeg" alt="Água com Gás">
+                <div class="description">Água sem Gás 500mL</div>
+                <div class="description2">
+                    Água mineral sem gás, perfeita para quem prefere uma bebida mais leve com sua pizza.
+                </div>
+                <div class="price">
+                    <button value="2.99">
+                        R$2.99 <i class="fa fa-shopping-cart"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="item" id="504">
+                <img src="../static/imagens/naoAlcoolicas/cha_gelado_limao.jpeg" alt="Chá Gelado">
+                <div class="description">Chá Gelado de Limão 300mL</div>
+                <div class="description2">
+                    Chá gelado com sabor de limão, perfeito para quem prefere uma bebida mais leve com sua pizza.
+                </div>
+                <div class="price">
+                    <button value="3.99">
+                        R$3.99 <i class="fa fa-shopping-cart"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="item" id="505">
+                <img src="../static/imagens/naoAlcoolicas/agua_coco.jpeg" alt="Água de Coco">
+                <div class="description">Água de Coco 600mL</div>
+                <div class="description2">
+                    Água de coco natural, uma opção saudável e hidratante que combina bem com uma refeição leve como pizza.
+                </div>
+                <div class="price">
+                    <button value="4.99">
+                        R$4.99 <i class="fa fa-shopping-cart"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="item" id="506">
+                <img src="../static/imagens/naoAlcoolicas/suco_uva.jpeg" alt="Suco de Uva">
+                <div class="description">Suco de Uva Natural 500mL</div>
+                <div class="description2">
+                    Suco de uva integral, feito 100% com uvas selecionadas.
+                </div>
+                <div class="price">
+                    <button value="6.99">
+                        R$6.99 <i class="fa fa-shopping-cart"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <script src="../static/sessoesMenu.js"></script>
+    </body>
+</html>
