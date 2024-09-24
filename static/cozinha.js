@@ -13,7 +13,6 @@ function atualizar_pedidos() {
   .then(response => response.json())
   .then(data => {
     data = data.pedidos;
-    console.log(data);
     if (!data) {
       return;
     }
@@ -26,6 +25,7 @@ function atualizar_pedidos() {
     }
 
     data.forEach(pedido => {
+      console.log(pedido);
       var num_itens_pedido = pedido.itens.length;
       const {pendentes, finalizados} = get_filtro_pedidos();
       const statusPedido = pedido.itens[0].situacao;
