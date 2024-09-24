@@ -201,7 +201,6 @@ def get_pedidos():
     finally:
         conn.close()
 
-
 def delete_pedido_carrinho(data):
     try:
         conn = pymysql.connect(
