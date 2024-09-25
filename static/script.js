@@ -45,5 +45,5 @@ document.addEventListener('DOMContentLoaded', function() {
             });
     }
     var id_mesa = document.body.id;
-    loadContent(`/promocoes.html/${id_mesa}`);
+    loadContent(`/principal.html/${id_mesa}`);
 });
